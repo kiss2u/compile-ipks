@@ -320,7 +320,7 @@ jobs:
       if: env.UPLOAD_FIRMWARE_FOR_ARTIFACT == 'true'
       with:
         name: ${{ env.date3 }} ${{matrix.target}}
-        path: ${{ env.FIRMWARE }}
+        path: packages
 
     - name: deploy files to server
       uses: easingthemes/ssh-deploy@main
