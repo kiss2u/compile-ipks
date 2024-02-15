@@ -203,11 +203,11 @@ jobs:
         done
         cd openwrt
         make defconfig
-        mv -f package/feeds/custom custom.b
+        mv -f package/feeds/jell jell.b
         mv -f feeds/packages/lang feeds/packages/lang.b
         mv -f feeds/packages feeds/packages.b
-        mkdir package/feeds/custom
-        cp -rf custom.b/{wxbase,lib*,rapidjson,jpcre2,toml11,gn,curl,quickjspp,qt*,libtorrent*,openssl,mbedtls,ppp,cups,nftables} package/feeds/custom/ || true
+        mkdir package/feeds/jell
+        cp -rf jell.b/{wxbase,lib*,rapidjson,jpcre2,toml11,gn,curl,quickjspp,qt*,libtorrent*,openssl,mbedtls,ppp,cups,nftables} package/feeds/jell/ || true
 
     - name: Compile the firmware
       run: |
