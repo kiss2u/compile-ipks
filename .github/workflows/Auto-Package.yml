@@ -277,7 +277,7 @@ jobs:
         cowurl=$(./transfer cow --block 2621440 -s --no-progress ${FIRMWARE})
         cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
         echo "COWURL=$cowurl" >> $GITHUB_ENV
-        echo "Download Link: ${{ env.EMOJI }} $cowurl ${{ env.EMOJI }} 🚀"
+        echo "Download Link: ${{ env.EMOJI }} $cowurl ${{ env.EMOJI }} 🎈"
  
     - name: Upload firmware to WeTransfer
       if: env.UPLOAD_FIRMWARE_TO_WETRANSFER == 'true'
@@ -287,7 +287,7 @@ jobs:
         wetrans=$(./transfer wet -s -p 16 --no-progress ${FIRMWARE})
         wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
         echo "WETRANS=$wetrans" >> $GITHUB_ENV
-        echo "Download Link: ${{ env.EMOJI }} $wetrans ${{ env.EMOJI }} 🚀"
+        echo "Download Link: ${{ env.EMOJI }} $wetrans ${{ env.EMOJI }} 🎈"
         
     - name: Create release
       id: create_release
